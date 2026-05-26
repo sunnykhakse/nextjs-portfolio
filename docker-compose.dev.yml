@@ -1,0 +1,15 @@
+version: '3.8'
+
+# This file can be used with: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+# It overrides the production configuration for development
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
