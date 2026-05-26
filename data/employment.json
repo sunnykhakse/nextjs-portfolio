@@ -1,0 +1,70 @@
+[
+  {
+    "period": "Jan 2025 – Present",
+    "role": "Lead Software Engineer",
+    "company": "Impetus Technologies India Pvt. Ltd. (Pune, India)",
+    "details": [
+      "Led a 12-engineer team using Agile methods (sprint planning, stand-ups, retrospectives).",
+      "Managed end-to-end user story delivery, applied TDD and BDD for high-quality, maintainable code.",
+      "Improved code quality using SonarQube and structured PR reviews via GitHub.",
+      "Optimized UI with modern frontend technologies and authored technical design documents."
+    ]
+  },
+  {
+    "period": "Apr 2022 – July 2024",
+    "role": "Development Engineer",
+    "company": "Big Water Consulting SCS (Brussels, Belgium)",
+    "details": [
+      "Developed user stories and microservices using Express, managing a 6-person team.",
+      "Set up Jenkins pipeline for automated deployment (TEST/PROD) integrated with GitHub.",
+      "Built a complete invoice module with automated generation and dashboard reporting widgets.",
+      "Implemented Translate API, used Docker, and ensured code quality with SonarQube."
+    ]
+  },
+  {
+    "period": "Jan 2019 – Apr 2022",
+    "role": "Tech Lead",
+    "company": "Torinit Consulting Services Pvt. Ltd. (Nagpur, India)",
+    "details": [
+      "Managed a 12-person team overseeing the development of Node.js/Express microservices.",
+      "Developed audio/video communication modules using React.js, Node.js, and Twilio.",
+      "Implemented SSR using Next.js and created custom API connection modules in Magento 2.",
+      "Reformed unit testing with TDD, revamped UI design, and created form validation libraries."
+    ]
+  },
+  {
+    "period": "July 2014 – Jan 2019",
+    "role": "Tech Lead",
+    "company": "TIU Consulting Pvt. Ltd. (Nagpur, India)",
+    "details": [
+      "Led a 4-person team managing the full scope from discovery to client demos and deployment.",
+      "Created complex E-Commerce websites in Magento 1 and Magento 2.",
+      "Developed scalable web applications using CakePHP and Codeigniter."
+    ]
+  },
+  {
+    "period": "May 2011 – July 2014",
+    "role": "Project Manager",
+    "company": "India Active Software Inc. (Nagpur, India)",
+    "details": [
+      "Managed every aspect of the project lifecycle (needs analysis, documentation, deployment).",
+      "Developed an ERP in PHP, AJAX, and MySQL and assisted with overall platform architecture."
+    ]
+  },
+  {
+    "period": "Feb 2010 – April 2011",
+    "role": "PHP Developer",
+    "company": "Snehal System (Nagpur, India)",
+    "details": [
+      "Designed and developed websites and web applications using PHP, JavaScript (Ajax, JSON), and Photoshop."
+    ]
+  },
+  {
+    "period": "Oct 2008 – May 2009",
+    "role": "Software Engineer",
+    "company": "Prolifics Software & Technologies (Pune, India)",
+    "details": [
+      "Began career designing and developing core websites and web applications using PHP, JavaScript, and Photoshop."
+    ]
+  }
+]

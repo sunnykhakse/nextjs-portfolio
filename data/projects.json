@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Signature Private Cloud",
+    "role": "Cloud UI / Full Stack",
+    "description": "Developed the Cloud UI for an enterprise private cloud platform managing foundational services. Worked on KMS, EIP, CLS, CAU, VPS, CBS, and IAM for secure access control. Built real-time Grafana monitoring dashboards.",
+    "tech": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Material UI"
+    ],
+    "metrics": "Intuitive and scalable interfaces for efficient cloud resource management."
+  },
+  {
+    "title": "Milesum",
+    "role": "Full Stack / Backend",
+    "description": "Designed a multi-tenant business platform with modules for CRM, Operations, Accounting, and Task Management. Frontend handles state via Redux; backend leverages Laravel for business logic and Node.js for real-time analytics.",
+    "tech": [
+      "React.js",
+      "TypeScript",
+      "Laravel",
+      "Node.js",
+      "Express",
+      "MySQL"
+    ],
+    "metrics": "Dynamic, scalable real-time data processing and enterprise insights."
+  },
+  {
+    "title": "Fundever",
+    "role": "Frontend / UI Engineer",
+    "description": "A marketplace simplifying the land and commercial lending process for lenders, brokers, and borrowers. Managed complex application forms using Formik and Yup validation.",
+    "tech": [
+      "React.js",
+      "Redux",
+      "TypeScript",
+      "Bootstrap 5"
+    ],
+    "metrics": "Digitized and streamlined a traditionally tedious lending process."
+  },
+  {
+    "title": "Carlton One",
+    "role": "Backend / Microservices",
+    "description": "Portal for managing nominations and awards. Engineered core microservices for Nomination, Award, and app downloadable links, while integrating front-end modules.",
+    "tech": [
+      "Node.js",
+      "Express",
+      "Vue.js"
+    ],
+    "metrics": "Highly decoupled architecture serving multiple enterprise clients."
+  },
+  {
+    "title": "Trea360",
+    "role": "Full Stack Engineer",
+    "description": "Developed an ERP solution for landscaping and construction companies featuring heavy modules for Workflow management, dispatch management, and HRM.",
+    "tech": [
+      "Angular",
+      "Laravel",
+      "Bootstrap"
+    ],
+    "metrics": "Comprehensive business process automation for construction."
+  },
+  {
+    "title": "Ticketgateway",
+    "role": "PHP / Web Developer",
+    "description": "An online portal (ticketgateway.com) to buy and sell tickets and costumes online. Built custom logic allowing users to seamlessly create events and manage ticket inventory.",
+    "tech": [
+      "Codeigniter",
+      "HTML",
+      "CSS",
+      "jQuery"
+    ],
+    "metrics": "Robust event creation and marketplace engine."
+  },
+  {
+    "title": "MonaB",
+    "role": "PHP / Web Developer",
+    "description": "An online portal (ticketgateway.com) to buy and sell tickets and costumes online. Built custom logic allowing users to seamlessly create events and manage ticket inventory.",
+    "tech": [
+      "Codeigniter",
+      "HTML",
+      "CSS",
+      "jQuery"
+    ],
+    "metrics": "Robust event creation and marketplace engine."
+  }
+]
