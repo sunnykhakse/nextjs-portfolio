@@ -88,6 +88,30 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Enhanced selection styling */
+::selection {
+  background: var(--accent-1);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-1);
+  border-radius: 10px;
+  transition: background 0.4s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-2);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 1.2;
