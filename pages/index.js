@@ -108,10 +108,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <div className={styles.badge}>
-              <div className={styles.pulse}></div>
-              Actively seeking Senior Tech Roles in Dubai / Abu Dhabi
-            </div>
             <h1 className={styles.title}>
               Architecting <br/>
               <span className={styles.gradientText}>Enterprise-Grade</span> Systems.
