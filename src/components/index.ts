@@ -1,0 +1,9 @@
+export { default as Navbar } from './Navbar';
+export { default as BackgroundGlow } from './BackgroundGlow';
+export { default as HeroSection } from './HeroSection';
+export { default as PhilosophySection } from './PhilosophySection';
+export { default as SkillsSection } from './SkillsSection';
+export { default as ProjectsSection } from './ProjectsSection';
+export { default as ExperienceSection } from './ExperienceSection';
+export { default as ContactSection } from './ContactSection';
+export { default as Footer } from './Footer';
