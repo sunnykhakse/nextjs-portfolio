@@ -49,7 +49,7 @@ const Navbar = ({ scrolled = false, isDark = true, onToggleTheme = () => {} }: N
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <div className={styles.navContainer}>
-        <div className={styles.logo} onClick={handleLogoClick} role="button" tabIndex={0}>SK.</div>
+        <div className={styles.logo} onClick={handleLogoClick} role="button" tabIndex={0}>SK</div>
         <div className={styles.navLinks}>
           {NAV_LINKS.map(link => (
             <a key={link.href} href={link.href}>{link.label}</a>
