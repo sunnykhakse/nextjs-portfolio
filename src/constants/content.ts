@@ -4,88 +4,89 @@
  */
 export const PROFILE = {
   name: 'Snehal Khakse',
-  title: 'Lead Full Stack Engineer',
+  title: 'Lead Full Stack Engineer & Engineering Leader',
   experience: '15+',
-  pageTitle: 'Snehal Khakse | Lead Full Stack Engineer',
-  metaDescription: 'Portfolio of Snehal Khakse — Lead Full Stack Engineer with 15+ years building scalable, secure web and cloud platforms for FinTech, SaaS, and Logistics.',
-  keywords: 'Lead Full Stack Engineer, Senior Software Engineer, Microservices, Cloud Architecture, FinTech, SaaS, React, Node.js, TypeScript, DevOps',
+  pageTitle: 'Snehal Khakse | Engineering Leader & Lead Full Stack Engineer',
+  metaDescription: 'Snehal Khakse is an engineering leader with 15+ years guiding teams, shaping architecture, and delivering secure platforms for FinTech, SaaS, retail, and logistics.',
+  keywords: 'Engineering Leader, Technical Leadership, Lead Full Stack Engineer, Engineering Manager, Team Leadership, Architecture, FinTech, SaaS, React, Node.js, TypeScript',
   // Update to your production domain when available
   siteUrl: 'https://your-domain.example',
   image: '/og-image.png'
 } as const;
 
 export const HERO = {
-  titleMain: 'Architecting',
-  titleHighlight: 'Enterprise-Grade',
-  titleEnd: 'Systems.',
-  subtitle: `I'm <b>Snehal Khakse</b>, a Lead / Senior Full Stack Engineer. With over 15 years of experience delivering scalable, secure applications across FinTech, SaaS, Retail, and Logistics domains.`,
-  cta1: 'Explore My Work',
+  titleMain: 'Leading Teams.',
+  titleHighlight: 'Building Systems',
+  titleEnd: 'That Matter.',
+  subtitle: `I'm <b>Snehal Khakse</b>, an engineering leader who connects people, product, and technology. For 15+ years, I've helped teams ship secure, scalable platforms across FinTech, SaaS, retail, and logistics.`,
+  cta1: 'See Leadership Impact',
   cta1Link: '#projects',
   cta2: 'View Timeline',
   cta2Link: '#experience'
 } as const;
 
 export const ABOUT = {
-  title: 'Engineering Philosophy',
-  subtitle: 'My approach to building software and leading teams over the last 15+ years.',
+  title: 'How I Lead Engineering',
+  subtitle: 'I create clarity for teams, make architecture practical, and turn complex delivery into measurable progress.',
   cards: [
     {
       icon: '🏗️',
-      title: 'Scalable Architecture',
-      description: 'Deep expertise in microservices and cloud platforms. Proven track record designing systems meant to handle high traffic and complex workflows.'
+      title: 'Direction With Context',
+      description: 'I translate product goals into clear technical direction, helping teams balance scale, speed, security, and maintainability.'
     },
     {
       icon: '⚡',
-      title: 'Quality First (TDD/BDD)',
-      description: 'Committed to high-quality code. I actively reform unit testing with TDD/BDD, use SonarQube, and mandate structured PR reviews to minimize technical debt.'
+      title: 'Quality as a Team Habit',
+      description: 'I build quality into the way teams work through TDD and BDD, automated checks, SonarQube, and structured reviews that make ownership visible.'
     },
     {
       icon: '🤝',
-      title: 'Agile Team Leadership',
-      description: 'Experienced in leading engineering teams (up to 12 members). I manage end-to-end delivery via Agile/Scrum, bridging the gap between business and tech.'
+      title: 'Teams That Grow',
+      description: 'I lead teams of up to 12 engineers through planning, feedback, mentoring, and delivery rituals that build confidence and capability.'
     }
   ]
 } as const;
 
 export const SKILLS = {
   title: 'Technical Skills',
-  subtitle: 'A breakdown of the technologies, tools, and databases I utilize in my day-to-day architecture.'
+  subtitle: 'The tools and practices I use to guide decisions, unblock teams, and turn architecture into reliable delivery.'
 } as const;
 
 export const PROJECTS = {
   title: 'Key Projects',
-  subtitle: "A selection of enterprise platforms and applications I've developed."
+  subtitle: 'Selected platforms where technical direction, team leadership, and hands-on delivery created measurable product impact.'
 } as const;
 
 export const EXPERIENCE = {
   title: 'Employment Details',
+  subtitle: 'From hands-on development to leading teams of 12, my career has grown around a simple goal: create clarity, strengthen people, and deliver dependable software.',
   education: '🎓 Bachelor of Engineering (E&T) — Amravati University (2007)'
 } as const;
 
 export const CONTACT = {
-  title: "Let's Build Together",
-  subtitle: "I am actively seeking senior technical roles in Dubai or Abu Dhabi. Let's discuss how my 15+ years of experience can drive your projects forward."
+  title: 'Build a Stronger Engineering Team',
+  subtitle: "I am actively seeking senior technical leadership roles in Dubai or Abu Dhabi. Let's discuss how I can help your teams make better decisions, deliver with confidence, and grow sustainably."
 } as const;
 
 export const SERVICES = {
-  title: 'What I Do',
-  subtitle: 'Engineering leadership, system design and full-cycle product delivery for teams and startups.',
+  title: 'Leadership in Practice',
+  subtitle: 'I help engineering teams align around outcomes, make sound technical decisions, and deliver end-to-end with confidence.',
   items: [
     {
-      title: 'Architecture & Design',
-      description: 'Design resilient microservices, event-driven systems, and scalable data architectures that support high availability and maintainability.'
+      title: 'Technical Direction',
+      description: 'Set an architecture vision, make trade-offs explicit, and guide resilient systems from discovery through production.'
     },
     {
-      title: 'Full-Stack Development',
-      description: 'End-to-end delivery using modern stacks (React, Next.js, Node.js, TypeScript). Focus on performance, accessibility, and developer ergonomics.'
+      title: 'Hands-On Delivery',
+      description: 'Stay close enough to the code to remove blockers, model good decisions, and keep delivery grounded in user value.'
     },
     {
-      title: 'Cloud & DevOps',
-      description: 'CI/CD, IaC (Terraform), and cloud migrations across AWS and Azure with emphasis on cost, security, and observability.'
+      title: 'Delivery Systems',
+      description: 'Create dependable CI/CD, infrastructure, and observability practices that give teams faster feedback and safer releases.'
     },
     {
-      title: 'Team Leadership',
-      description: 'Mentoring, hiring, and building high-performing engineering teams that ship reliably and measure impact.'
+      title: 'Team Growth',
+      description: 'Mentor engineers, establish healthy delivery rituals, and build high-performing teams that communicate clearly and measure impact.'
     }
   ]
 } as const;

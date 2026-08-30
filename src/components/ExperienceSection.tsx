@@ -22,6 +22,7 @@ const ExperienceSection = ({ experience = [] as Experience[] }) => {
     <section className={styles.section} id="experience">
       <div className={styles.expHeader}>
         <h2 className={styles.sectionTitle}>{EXPERIENCE.title}</h2>
+        <p className={styles.sectionSubtitle}>{EXPERIENCE.subtitle}</p>
         <div className={styles.certBadge}>
           {EXPERIENCE.education}
         </div>

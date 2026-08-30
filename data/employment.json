@@ -4,10 +4,10 @@
     "role": "Lead Software Engineer",
     "company": "Impetus Technologies India Pvt. Ltd. (Pune, India)",
     "details": [
-      "Led a 12-engineer team using Agile methods (sprint planning, stand-ups, retrospectives).",
-      "Managed end-to-end user story delivery, applied TDD and BDD for high-quality, maintainable code.",
-      "Improved code quality using SonarQube and structured PR reviews via GitHub.",
-      "Optimized UI with modern frontend technologies and authored technical design documents."
+      "Lead a 12-engineer team through sprint planning, stand-ups, retrospectives, and day-to-day delivery coordination.",
+      "Own end-to-end user story delivery, helping the team turn requirements into maintainable solutions with TDD and BDD.",
+      "Raise engineering standards through SonarQube, structured GitHub pull-request reviews, and shared quality practices.",
+      "Provide technical direction through design documents and hands-on frontend improvements that keep product and engineering aligned."
     ]
   },
   {
@@ -15,10 +15,10 @@
     "role": "Development Engineer",
     "company": "Big Water Consulting SCS (Brussels, Belgium)",
     "details": [
-      "Developed user stories and microservices using Express, managing a 6-person team.",
-      "Set up Jenkins pipeline for automated deployment (TEST/PROD) integrated with GitHub.",
-      "Built a complete invoice module with automated generation and dashboard reporting widgets.",
-      "Implemented Translate API, used Docker, and ensured code quality with SonarQube."
+      "Managed a 6-person team while shaping user stories and delivering Express-based microservices.",
+      "Created the Jenkins and GitHub deployment workflow for TEST and PROD, giving the team a repeatable release path.",
+      "Led delivery of a complete invoice module with automated generation and dashboard reporting widgets.",
+      "Established practical engineering foundations with Docker, Translate API integration, and SonarQube quality checks."
     ]
   },
   {
@@ -26,10 +26,10 @@
     "role": "Tech Lead",
     "company": "Torinit Consulting Services Pvt. Ltd. (Nagpur, India)",
     "details": [
-      "Managed a 12-person team overseeing the development of Node.js/Express microservices.",
-      "Developed audio/video communication modules using React.js, Node.js, and Twilio.",
-      "Implemented SSR using Next.js and created custom API connection modules in Magento 2.",
-      "Reformed unit testing with TDD, revamped UI design, and created form validation libraries."
+      "Managed a 12-person team and guided the development of Node.js and Express microservices from planning through delivery.",
+      "Led implementation of audio and video communication modules using React.js, Node.js, and Twilio.",
+      "Made architectural decisions around Next.js server-side rendering and custom Magento 2 API connection modules.",
+      "Improved team quality and developer experience by introducing TDD practices, refreshing UI design, and creating reusable form-validation libraries."
     ]
   },
   {
@@ -37,9 +37,9 @@
     "role": "Tech Lead",
     "company": "TIU Consulting Pvt. Ltd. (Nagpur, India)",
     "details": [
-      "Led a 4-person team managing the full scope from discovery to client demos and deployment.",
-      "Created complex E-Commerce websites in Magento 1 and Magento 2.",
-      "Developed scalable web applications using CakePHP and Codeigniter."
+      "Led a 4-person team across the full delivery lifecycle, from discovery and estimation to client demos and deployment.",
+      "Translated complex commerce requirements into Magento 1 and Magento 2 solutions while keeping stakeholders close to delivery.",
+      "Guided development of scalable web applications using CakePHP and CodeIgniter."
     ]
   },
   {
@@ -47,8 +47,8 @@
     "role": "Project Manager",
     "company": "India Active Software Inc. (Nagpur, India)",
     "details": [
-      "Managed every aspect of the project lifecycle (needs analysis, documentation, deployment).",
-      "Developed an ERP in PHP, AJAX, and MySQL and assisted with overall platform architecture."
+      "Managed the complete project lifecycle, including needs analysis, documentation, coordination, delivery, and deployment.",
+      "Helped shape the platform architecture while leading development of an ERP using PHP, AJAX, and MySQL."
     ]
   },
   {
@@ -56,7 +56,7 @@
     "role": "PHP Developer",
     "company": "Snehal System (Nagpur, India)",
     "details": [
-      "Designed and developed websites and web applications using PHP, JavaScript (Ajax, JSON), and Photoshop."
+      "Owned the design and development of websites and web applications, building a foundation in PHP, JavaScript, Ajax, JSON, and visual communication."
     ]
   },
   {
@@ -64,7 +64,7 @@
     "role": "Software Engineer",
     "company": "Prolifics Software & Technologies (Pune, India)",
     "details": [
-      "Began career designing and developing core websites and web applications using PHP, JavaScript, and Photoshop."
+      "Started my engineering career by designing and developing core websites and web applications using PHP, JavaScript, and Photoshop."
     ]
   }
 ]
