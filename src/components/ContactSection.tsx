@@ -1,7 +1,11 @@
 import styles from '../../styles/Home.module.css';
-import { CONTACT } from '../constants/content';
-import { CONTACT_LINKS, ContactLink } from '../constants/navigation';
+import { getContent, type Locale } from '../constants/content';
+import { getContactLinks, ContactLink } from '../constants/navigation';
 import type { ReactElement } from 'react';
+
+type ContactSectionProps = {
+  locale?: Locale;
+};
 
 const ContactLinkEl = ({ label, href, type = 'primary', target = '' }: ContactLink) => {
   const className = type === 'primary' ? styles.primaryBtn : styles.socialBtn;
@@ -19,19 +23,22 @@ const ContactLinkEl = ({ label, href, type = 'primary', target = '' }: ContactLi
   );
 };
 
-const ContactSection = (): ReactElement => {
+const ContactSection = ({ locale = 'en' }: ContactSectionProps): ReactElement => {
+  const content = getContent(locale);
+  const contactLinks = getContactLinks(locale);
+
   return (
     <section className={styles.section} id="contact">
       <div className={styles.contactGlass}>
         <div className={styles.contactContent}>
           <h2 className={styles.sectionTitle} style={{ marginBottom: '16px' }}>
-            {CONTACT.title}
+            {content.contact.title}
           </h2>
           <p className={styles.sectionSubtitle} style={{ marginBottom: '32px', maxWidth: '100%' }}>
-            {CONTACT.subtitle}
+            {content.contact.subtitle}
           </p>
           <div className={styles.contactLinks}>
-            {CONTACT_LINKS.map((link, idx) => (
+            {contactLinks.map((link, idx) => (
               <ContactLinkEl key={idx} {...link} />
             ))}
           </div>

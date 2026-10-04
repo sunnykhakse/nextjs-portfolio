@@ -1,14 +1,14 @@
 import styles from '../../styles/Home.module.css';
-import { NAV_LINKS } from '../constants/navigation';
+import { LOCALE_OPTIONS, getContent, type Locale } from '../constants/content';
+import { getNavLinks } from '../constants/navigation';
 
 type ThemeToggleProps = {
   isDark: boolean;
   onToggle: () => void;
+  title: string;
 };
 
-const ThemeToggle = ({ isDark, onToggle }: ThemeToggleProps) => {
-  const title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-
+const ThemeToggle = ({ isDark, onToggle, title }: ThemeToggleProps) => {
   return (
     <button
       className={styles.themeToggle}
@@ -41,23 +41,43 @@ type NavbarProps = {
   scrolled?: boolean;
   isDark?: boolean;
   onToggleTheme?: () => void;
+  locale?: Locale;
+  onChangeLocale?: (locale: Locale) => void;
 };
 
-const Navbar = ({ scrolled = false, isDark = true, onToggleTheme = () => {} }: NavbarProps) => {
+const Navbar = ({
+  scrolled = false,
+  isDark = true,
+  onToggleTheme = () => {},
+  locale = 'en',
+  onChangeLocale = () => {}
+}: NavbarProps) => {
   const handleLogoClick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const navLinks = getNavLinks(locale);
+  const content = getContent(locale);
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <div className={styles.navContainer}>
         <div className={styles.logo} onClick={handleLogoClick} role="button" tabIndex={0}>SK</div>
         <div className={styles.navLinks}>
-          {NAV_LINKS.map(link => (
+          {navLinks.map(link => (
             <a key={link.href} href={link.href}>{link.label}</a>
           ))}
         </div>
         <div className={styles.navRight}>
-          <ThemeToggle isDark={isDark} onToggle={onToggleTheme} />
-          <a href="#contact" className={styles.navBtn}>Hire Me</a>
+          <select
+            className={styles.languageSelect}
+            value={locale}
+            onChange={(event) => onChangeLocale(event.target.value as Locale)}
+            aria-label="Select language"
+          >
+            {LOCALE_OPTIONS.map(option => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
+          </select>
+          <ThemeToggle isDark={isDark} onToggle={onToggleTheme} title={isDark ? content.theme.light : content.theme.dark} />
+          <a href="#contact" className={styles.navBtn}>{content.nav.hireMe}</a>
         </div>
       </div>
     </nav>

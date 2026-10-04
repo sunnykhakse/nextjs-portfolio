@@ -1,8 +1,14 @@
 import styles from '../../styles/Home.module.css';
+import { getContent, type Locale } from '../constants/content';
 import type { ReactElement } from 'react';
 
-const Footer = (): ReactElement => {
+type FooterProps = {
+  locale?: Locale;
+};
+
+const Footer = ({ locale = 'en' }: FooterProps): ReactElement => {
   const currentYear = new Date().getFullYear();
+  const content = getContent(locale);
 
   const handleLogoClick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -18,7 +24,7 @@ const Footer = (): ReactElement => {
         >
           SK.
         </div>
-        <p>© {currentYear} Snehal Khakse. Designed & Built with Next.js.</p>
+        <p>{content.footer.copyright.replace('{year}', String(currentYear))}</p>
       </div>
     </footer>
   );

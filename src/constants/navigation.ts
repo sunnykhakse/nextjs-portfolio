@@ -1,3 +1,5 @@
+import { getContent, type Locale } from './content';
+
 export type ContactLink = {
   label: string;
   href: string;
@@ -5,17 +7,28 @@ export type ContactLink = {
   target?: string;
 };
 
-export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' }
-] as const;
+export const getNavLinks = (locale: Locale = 'en') => {
+  const { nav } = getContent(locale);
 
-export const CONTACT_LINKS: ContactLink[] = [
-  { label: 'Email Me', href: 'mailto:khakse.sunny@gmail.com', type: 'primary' },
-  { label: 'WhatsApp', href: 'https://wa.me/918446212878', type: 'social', target: '_blank' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', type: 'social', target: '_blank' }
-];
+  return [
+    { label: nav.about, href: '#about' },
+    { label: nav.skills, href: '#skills' },
+    { label: nav.projects, href: '#projects' },
+    { label: nav.experience, href: '#experience' }
+  ] as const;
+};
+
+export const getContactLinks = (locale: Locale = 'en'): ContactLink[] => {
+  const { contactLinks } = getContent(locale);
+
+  return [
+    { label: contactLinks.email, href: 'mailto:khakse.sunny@gmail.com', type: 'primary' },
+    { label: contactLinks.whatsapp, href: 'https://wa.me/918446212878', type: 'social', target: '_blank' },
+    { label: contactLinks.linkedIn, href: 'https://linkedin.com', type: 'social', target: '_blank' }
+  ];
+};
+
+export const NAV_LINKS = getNavLinks('en');
+export const CONTACT_LINKS = getContactLinks('en');
 
 export default NAV_LINKS;

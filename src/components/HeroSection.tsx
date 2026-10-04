@@ -1,20 +1,26 @@
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
-import { HERO } from '../constants/content';
+import { getContent, type Locale } from '../constants/content';
 import type { ReactElement } from 'react';
 
-const HeroSection = (): ReactElement => {
+type HeroSectionProps = {
+  locale?: Locale;
+};
+
+const HeroSection = ({ locale = 'en' }: HeroSectionProps): ReactElement => {
+  const content = getContent(locale);
+
   return (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.title}>
-          {HERO.titleMain} <br/>
-          <span className={styles.gradientText}>{HERO.titleHighlight}</span> {HERO.titleEnd}
+          {content.hero.titleMain} <br/>
+          <span className={styles.gradientText}>{content.hero.titleHighlight}</span> {content.hero.titleEnd}
         </h1>
-        <p className={styles.subtitle} dangerouslySetInnerHTML={{ __html: HERO.subtitle }} />
+        <p className={styles.subtitle} dangerouslySetInnerHTML={{ __html: content.hero.subtitle }} />
         <div className={styles.heroCta}>
-          <a href={HERO.cta1Link} className={styles.primaryBtn}>{HERO.cta1}</a>
-          <a href={HERO.cta2Link} className={styles.secondaryBtn}>{HERO.cta2}</a>
+          <a href={content.hero.cta1Link} className={styles.primaryBtn}>{content.hero.cta1}</a>
+          <a href={content.hero.cta2Link} className={styles.secondaryBtn}>{content.hero.cta2}</a>
         </div>
       </div>
       
@@ -22,10 +28,11 @@ const HeroSection = (): ReactElement => {
         <div className={styles.heroImageDecoration}></div>
         <Image 
           src="/headshot.jpg" 
-          alt={HERO.titleMain}
+          alt={content.hero.titleMain}
           width={500} 
           height={600} 
           priority
+          sizes="(max-width: 768px) 100vw, 42vw"
           className={styles.heroImage}
         />
       </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../../styles/Home.module.css';
-import { SKILLS_DATA, SKILL_CATEGORIES } from '../constants/skills';
-import { SKILLS } from '../constants/content';
+import { SKILLS_DATA, SKILL_CATEGORIES, getSkillCategoryLabel, getSkillCategoryDescription } from '../constants/skills';
+import { getContent, type Locale } from '../constants/content';
 import type { ReactElement } from 'react';
 
 type SkillsTabProps = {
@@ -10,17 +10,20 @@ type SkillsTabProps = {
   onClick: () => void;
 };
 
-const SkillsTab = ({ category, isActive, onClick }: SkillsTabProps) => (
+const SkillsTab = ({ category, isActive, onClick, locale }: SkillsTabProps & { locale?: string }) => (
   <button 
     className={`${styles.tabBtn} ${isActive ? styles.activeTab : ''}`}
     onClick={onClick}
   >
-    {category.charAt(0).toUpperCase() + category.slice(1)}
+    {getSkillCategoryLabel(category, locale)}
   </button>
 );
 
-const SkillsList = ({ category, skills }: { category: string; skills: string[] }) => (
+const SkillsList = ({ category, skills, locale }: { category: string; skills: string[]; locale?: string }) => (
   <div className={styles.skillsGlass}>
+    <p style={{ margin: '0 0 18px', color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+      {getSkillCategoryDescription(category, locale)}
+    </p>
     <div className={styles.skillListInteractive}>
       {skills.map((skill, idx) => (
         <span 
@@ -35,8 +38,13 @@ const SkillsList = ({ category, skills }: { category: string; skills: string[] }
   </div>
 );
 
-const SkillsSection = (): ReactElement => {
+type SkillsSectionProps = {
+  locale?: Locale;
+};
+
+const SkillsSection = ({ locale = 'en' }: SkillsSectionProps): ReactElement => {
   const [activeSkillTab, setActiveSkillTab] = useState<string>('frontend');
+  const content = getContent(locale);
   const currentSkills = SKILLS_DATA[activeSkillTab] || SKILLS_DATA.frontend;
 
   return (
@@ -44,10 +52,10 @@ const SkillsSection = (): ReactElement => {
       <div className={styles.skillsContainer}>
         <div className={styles.skillsInfo}>
           <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>
-            {SKILLS.title}
+            {content.skills.title}
           </h2>
           <p className={styles.sectionSubtitle} style={{ textAlign: 'left', marginBottom: '32px' }}>
-            {SKILLS.subtitle}
+            {content.skills.subtitle}
           </p>
           
           <div className={styles.tabsContainer}>
@@ -55,6 +63,7 @@ const SkillsSection = (): ReactElement => {
               <SkillsTab 
                 key={category}
                 category={category}
+                locale={locale}
                 isActive={activeSkillTab === category}
                 onClick={() => setActiveSkillTab(category)}
               />
@@ -63,7 +72,7 @@ const SkillsSection = (): ReactElement => {
         </div>
         
         <div className={styles.skillsDisplay}>
-          <SkillsList category={activeSkillTab} skills={currentSkills} />
+          <SkillsList category={activeSkillTab} skills={currentSkills} locale={locale} />
         </div>
       </div>
     </section>

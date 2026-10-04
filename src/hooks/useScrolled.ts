@@ -6,12 +6,26 @@ export const useScrolled = (): boolean => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > SCROLL_THRESHOLD);
+      if (ticking) return;
+
+      ticking = true;
+
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > SCROLL_THRESHOLD);
+        ticking = false;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      ticking = false;
+    };
   }, []);
 
   return scrolled;

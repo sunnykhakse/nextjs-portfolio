@@ -1,5 +1,5 @@
 import styles from '../../styles/Home.module.css';
-import { ABOUT } from '../constants/content';
+import { getContent, type Locale } from '../constants/content';
 import type { ReactElement } from 'react';
 
 type PhilosophyCardProps = {
@@ -16,13 +16,19 @@ const PhilosophyCard = ({ icon, title, description }: PhilosophyCardProps) => (
   </div>
 );
 
-const PhilosophySection = (): ReactElement => {
+type PhilosophySectionProps = {
+  locale?: Locale;
+};
+
+const PhilosophySection = ({ locale = 'en' }: PhilosophySectionProps): ReactElement => {
+  const content = getContent(locale);
+
   return (
     <section className={styles.section} id="about">
-      <h2 className={styles.sectionTitle}>{ABOUT.title}</h2>
-      <p className={styles.sectionSubtitle}>{ABOUT.subtitle}</p>
+      <h2 className={styles.sectionTitle}>{content.about.title}</h2>
+      <p className={styles.sectionSubtitle}>{content.about.subtitle}</p>
       <div className={styles.philosophyGrid}>
-        {ABOUT.cards.map((card, idx) => (
+        {content.about.cards.map((card, idx) => (
           <PhilosophyCard key={idx} {...card} />
         ))}
       </div>

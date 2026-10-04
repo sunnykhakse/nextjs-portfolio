@@ -1,5 +1,10 @@
 import styles from '../../styles/Home.module.css';
-import { EXPERIENCE, Experience } from '../constants/content';
+import { getContent, type Experience, type Locale } from '../constants/content';
+
+type ExperienceSectionProps = {
+  locale?: Locale;
+  experience?: Experience[];
+};
 
 const ExperienceCard = ({ period, role, company, details }: Experience) => (
   <div className={styles.timelineItem}>
@@ -17,14 +22,16 @@ const ExperienceCard = ({ period, role, company, details }: Experience) => (
   </div>
 );
 
-const ExperienceSection = ({ experience = [] as Experience[] }) => {
+const ExperienceSection = ({ locale = 'en', experience = [] as Experience[] }: ExperienceSectionProps) => {
+  const content = getContent(locale);
+
   return (
     <section className={styles.section} id="experience">
       <div className={styles.expHeader}>
-        <h2 className={styles.sectionTitle}>{EXPERIENCE.title}</h2>
-        <p className={styles.sectionSubtitle}>{EXPERIENCE.subtitle}</p>
+        <h2 className={styles.sectionTitle}>{content.experience.title}</h2>
+        <p className={styles.sectionSubtitle}>{content.experience.subtitle}</p>
         <div className={styles.certBadge}>
-          {EXPERIENCE.education}
+          {content.experience.education}
         </div>
       </div>
       
